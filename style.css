@@ -1,0 +1,225 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
+/* Set global variables */
+:root {
+    --main-font: 'Noto Sans';
+    --main-font-size: 14px;
+
+    --main-font-color: black;
+
+    --header-image-path: url("/public/images/triptyk-header.jpg");
+
+    /* Colors */
+    --light-green: rgba(158, 219, 79, 1.0);
+    --light-green-transparent: rgba(158, 219, 79, 0.6);
+    --purple: rgba(197, 50, 197, 1.0);
+    --purple-transparent: rgba(197, 50, 197, 0.6);
+    --red-brown: rgb(217, 169, 168);
+    --red-brown-transparent: rgba(217, 169, 168, 0.6);
+    --purple-pastelle: rgba(193, 168, 217, 1.0);
+    --purple-pastelle-transparent: rgba(193, 168, 217, 0.6);
+
+    /* Color macros */
+    --menu-item-hover-color: var(--light-green-transparent);
+    --link-hover-color: var(--purple);
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: var(--main-font);
+}
+
+/* Header styling */
+#header {
+    width: 100%;
+    background-image: var(--header-image-path);
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
+}
+
+.header-title {
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    list-style: none;
+    padding: 4px 15px;
+    display: block;
+}
+
+.menu li:hover {
+    background-color: var(--menu-item-hover-color);
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu a:link, .menu a:visited, .menu a:active {
+    color: var(--main-font-color)
+}
+
+/* Body styling */
+#body {
+    width: 100%;
+}
+
+#body h2 {
+    text-align: center;
+    margin: 0;
+    margin: 10px 0px;
+}
+
+#body p {
+    margin: 10px 0px;
+    font-size: var(--main-font-size);
+}
+
+#body a {
+    transition: color 0.1s;
+}
+
+#body a:link, #body a:visited, #body a:active {
+    color: var(--main-font-color);
+}
+
+#body a:hover {
+    color: var(--link-hover-color);
+}
+
+#body li {
+    font-size: var(--main-font-size);
+    list-style: none;
+}
+
+#body figure {
+    vertical-align: top;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 20px 0px;
+}
+
+#body figure img {
+    max-height: 800px;
+    max-width: 100%;
+    width: auto;
+}
+
+#body figure figcaption {
+    display: block;
+    text-align: left;
+    font-size: calc(var(--main-font-size) - 2px);
+    font-style: italic;
+}
+
+/* Work display styling */
+.work-container {
+    width: 100%;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 20px 0;
+    column-gap: 20px;
+}
+
+.work-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
+}
+
+.work-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+}
+
+.work-date {
+    font-weight: 100;
+}
+
+.work-tags {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-title {
+    font-weight: bold;
+    font-style: italic;
+    font-size: calc(var(--main-font-size) + 4px);
+    width: 100%;
+}
+
+.work-subtitle {
+    font-style: italic;
+    padding-bottom: 6px;
+}
+
+.work-desc {
+    font-weight: 300;
+}
+
+.work-body {
+}
+
+@media (max-width: 800px) {
+    .work {
+	flex-direction: column;
+    }
+    .work-left {
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+    }
+    .work-tags {
+	flex-direction: row;
+	gap: 4px;
+    }
+    .work-tags div:not(:last-child):after {
+	content: ",";
+    }
+}
+
+#tags-selector {
+    font-family: var(--main-font);
+    padding: 4px;
+}
+		  
+
+/* Footer styling */
+#footer p {
+    font-size: var(--main-font-size);
+    text-align: center;
+}
+
+#footer a {
+    transition: color 0.1s;
+}
+
+#footer a:link, #footer a:visited, #footer a:active {
+    color: var(--main-font-color);
+}
+
+#footer a:hover {
+    color: var(--link-hover-color);
+}
