@@ -36,9 +36,11 @@
     </div>
 
     <script>
-      $(function(){
-	  $("#works").load("/works/works.html");		
-      });
+      document.addEventListener('DOMContentLoaded', (event) => {
+	  $(function(){
+	      $("#works").load("/works/works.html");		
+	  });
+      })
     </script>
 
   </body>

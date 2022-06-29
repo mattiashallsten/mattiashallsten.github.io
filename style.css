@@ -126,6 +126,11 @@
     font-style: italic;
 }
 
+/* Lists in body */
+#body ul li {
+    padding-bottom: 10px;
+}
+
 /* Work display styling */
 .work-container {
     width: 100%;
@@ -236,6 +241,9 @@
 		  
 
 /* Footer styling */
+#footer {
+    margin-top: 20px;
+}
 #footer p {
     font-size: var(--main-font-size);
     text-align: center;
