@@ -20,13 +20,15 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - run: cd build-tool
+
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    
+        working-directory: build-tool
     - run: npm ci
+      working-directory: build-tool
     - run: node build.js -i "../works/works/" -o "../works/works.html"
+      working-directory: build-tool
