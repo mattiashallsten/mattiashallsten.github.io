@@ -26,7 +26,11 @@ const output = argv.output;
 
 
 let fileNames = fs.readdirSync(inputDir).filter(f => f.endsWith(".md")).reverse();
-let files = fileNames.map(p => fs.readFileSync(inputDir + p, 'utf-8')).map(d => yamlFront.loadFront(d));
+let files = fileNames.map(p => fs.readFileSync(inputDir + p, 'utf-8')).map((d, i) => {
+    let obj = yamlFront.loadFront(d);
+    obj["name"] = fileNames[i];
+    return obj;
+});
 
 let pageTags = {"all": files.length};
 
@@ -114,7 +118,7 @@ let filesHtml = files.map(f => {
 
     right += '</div>'; // Close right div
 
-    return '<div class="work">' + left + right + '</div>';    
+    return '<div class="work" id="' + f.name.replace(".md", "") + '">' + left + right + '</div>';    
 });
 
 let selector = '<div class="tags-selector-container">' +
