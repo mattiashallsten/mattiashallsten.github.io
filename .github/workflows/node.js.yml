@@ -22,10 +22,16 @@ jobs:
     steps:
 
     - uses: actions/checkout@v3
+    
+    - name: Configure NPM
+      working-directory: build-tool
+      run: |
+        echo "//npm.pkg.github.com/:_authToken=\${NODE_AUTH_TOKEN}" >> .npmrc
+        echo "always-auth: true" >> .npmrc
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        path: build-tool
         node-version: ${{ matrix.node-version }}
         cache: 'npm'  
     - run: npm ci
