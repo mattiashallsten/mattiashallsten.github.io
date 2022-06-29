@@ -83,23 +83,24 @@ let filesHtml = files.map(f => {
     }
 
     if (f.youtube) {
-	right += '<div class="video-container">' +
-		 '<iframe class="video" src="https://www.youtube.com/embed/' +
+	right += '<div class="youtube-container">' +
+		 '<iframe class="youtube" src="https://www.youtube.com/embed/' +
 		 f.youtube +
 		 '" allowfullscreen></iframe></div>';
     }
 
     if (f.soundcloud) {
 
-	right += '<iframe width="100%" height="166" scrolling="no"' + 
+	right += '<div class="soundcloud-container"><iframe width="100%" height="166" scrolling="no"' + 
 		 'frameborder="no"' +
 		 'src="https://w.soundcloud.com/player/?url=https%3A/' +
 		 '/api.soundcloud.com/tracks/' + f.soundcloud +
-		 '&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+		 '&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>' +
+		 '</div>'
     }
 
     if (f.vimeo) {
-	right += '<div style="padding:56.25% 0 0 0;position:relative;">' +
+	right += '<div class="vimeo-container"><div style="padding:56.25% 0 0 0;position:relative;">' +
 		 '<iframe src="https://player.vimeo.com/video/' +
 		 f.vimeo +
 		 '?h=5efc670107&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"' + 
@@ -107,7 +108,8 @@ let filesHtml = files.map(f => {
 		 'allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"' +
 		 'title="Play it yourself">'+ 
 		 '</iframe></div>' +
-		 '<script src="https://player.vimeo.com/api/player.js"></script>';
+		 '<script src="https://player.vimeo.com/api/player.js"></script>' +
+		 '</div>';
     }
 
     right += '</div>'; // Close right div

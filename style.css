@@ -180,13 +180,14 @@
 }
 
 /* Embedded links */
-.video-container {
+.youtube-container {
+    margin: 20px 0;
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
 }
 
-.video {
+.youtube {
     position: absolute;
     top: 0;
     left: 0;
@@ -197,6 +198,14 @@
 
 .audio-player {
     width: 100%;
+}
+
+.soundcloud-container {
+    margin: 20px 0;
+}
+
+.vimeo-container {
+    margin: 20px 0;
 }
 
 .work-body {
