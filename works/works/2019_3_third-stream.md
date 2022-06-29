@@ -3,8 +3,8 @@ title: Third Stream Activities
 date: 2019
 desc: Text-sound composition
 tags:
-	- fixed media
-	- text
+  - fixed media
+  - text
 ---
 Spatialised in the 29-channel speaker dome at KMH. The work consists
 of a recording of me reading a text that discusses the new campus at

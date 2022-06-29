@@ -15,10 +15,10 @@
     <script src="/script.js"></script>
     
     <script>
-      // Call page specific functions here
-      document.addEventListener('DOMContentLoaded', (event) => {
-	  loadWorks("/works/works/");
-      });
+      // // Call page specific functions here
+      // document.addEventListener('DOMContentLoaded', (event) => {
+      // 	  loadWorks("/works/works/");
+      // });
     </script>
     
     <div id="container">
@@ -28,10 +28,18 @@
       <div id="body">
 	<!-- Content goes here -->
 	<h2 class="body-title">Works</h2>
+	<div id="works"></div>
       </div>
 
       <!-- Footer get populated by Jquery -->
       <div id="footer"></div>
     </div>
+
+    <script>
+      $(function(){
+	  $("#works").load("/works/works.html");		
+      });
+    </script>
+
   </body>
 </html>

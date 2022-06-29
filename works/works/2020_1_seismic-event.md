@@ -3,8 +3,8 @@ title: Seismisk Händelse
 date: 2017-2020
 desc: Multi-channel sound installation and performance
 tags:
-	- installation
-	- performance
+  - installation
+  - performance
 youtube: QlMCUcLNwac
 ---
 In collaboration with artist <a href="https://www.hannaljungh.com/"
