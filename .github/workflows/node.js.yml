@@ -25,9 +25,9 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
+        path: build-tool
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        working-directory: build-tool
+        cache: 'npm'  
     - run: npm ci
       working-directory: build-tool
     - run: node build.js -i "../works/works/" -o "../works/works.html"
